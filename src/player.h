@@ -11,8 +11,8 @@ public:
     void draw(sf::RenderTarget &target);
     void update(float deltaTime);
     sf::Vector2f pos;
-private:
     float angle;
+	float angleY = 40;
 };
 
 #endif // PLAYER_H

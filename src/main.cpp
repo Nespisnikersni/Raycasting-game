@@ -7,14 +7,23 @@
 #include "renderer.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Raycasting");
-    window.setFramerateLimit(30);
+    sf::RenderWindow window(sf::VideoMode(SCREEN_W, SCREEN_H), "Raycasting");
+    window.setFramerateLimit(144);
     std::string strings[] = {
-        "serfs",
-        "g   g",
-        "g   g",
-        "g   g",
-        "ggggg"
+        "serfssefsefsfesfsf",
+        "g                g",
+        "gfesfefesf      g",
+        "g                g",
+        "g  ff     fesfesfg",
+        "g   ff           g",
+        "g    ff          g",
+        "g     ff         g",
+        "g                g",
+        "gfff     f       g",
+        "g        f       g",
+        "g        f       g",
+        "g        f       g",
+        "gggggggggggggggggg"
     };
     
     const int numRows = sizeof(strings) / sizeof(strings[0]);
@@ -40,8 +49,7 @@ int main() {
         }
         player.update(deltaTime);
         window.clear();
-        map.draw(window);
-        player.draw(window);
+		renderer.draw3dView(window, player, map);
         window.display();
     }
 

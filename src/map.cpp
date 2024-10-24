@@ -5,11 +5,8 @@ void Map::draw(sf::RenderTarget& target) const {
     if (grid.empty()) {
         return;
     }
-    sf::RectangleShape background(sf::Vector2f(cellSize * grid[0].size(), cellSize * grid.size()));
-    background.setFillColor(sf::Color::White);
-    target.draw(background);
 
-    sf::RectangleShape cell(sf::Vector2f(cellSize - 1.0f, cellSize - 1.0f));
+	sf::RectangleShape cell(sf::Vector2f(cellSize * 0.95f, cellSize * 0.95f));
     
     for (size_t y = 0; y < grid.size(); ++y) {
         for (size_t x = 0; x < grid[y].size(); ++x) {
@@ -18,7 +15,7 @@ void Map::draw(sf::RenderTarget& target) const {
             } else {
                 cell.setFillColor(sf::Color::White);
             }
-            cell.setPosition(x * cellSize, y * cellSize);
+			cell.setPosition(sf::Vector2f(x, y) * cellSize + sf::Vector2f(cellSize * 0.025f, cellSize * 0.025f));
             target.draw(cell);
         }
     }

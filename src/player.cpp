@@ -45,5 +45,11 @@ void Player::update(float deltaTime) {
         pos.x -= cos(radians) * MOVE_SPEED * deltaTime;
         pos.y -= sin(radians) * MOVE_SPEED * deltaTime;
     }
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		angleY -= TURN_SPEED * deltaTime;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		angleY += TURN_SPEED * deltaTime;
+	}
 }
 
