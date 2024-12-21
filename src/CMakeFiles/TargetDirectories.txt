@@ -1,0 +1,4 @@
+/home/nespisnikersni/Projects/cpp/Raycasting-game/src/CMakeFiles/Raycasting-game.dir
+/home/nespisnikersni/Projects/cpp/Raycasting-game/src/CMakeFiles/run.dir
+/home/nespisnikersni/Projects/cpp/Raycasting-game/src/CMakeFiles/edit_cache.dir
+/home/nespisnikersni/Projects/cpp/Raycasting-game/src/CMakeFiles/rebuild_cache.dir

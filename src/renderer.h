@@ -1,4 +1,5 @@
-#pragma once
+#ifndef RENDERER_H
+#define RENDERER_H
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <cmath>
@@ -14,3 +15,4 @@ class Renderer{
     void draw3dView(sf::RenderTarget &target,const Player &player,const Map &map);
   private:
 };
+#endif // RENDERER_H
